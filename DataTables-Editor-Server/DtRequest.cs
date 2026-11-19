@@ -378,7 +378,7 @@ namespace DataTables
 
                     if (http.ContainsKey("search"))
                     {
-                        DropdownSearch = http["search"] as string;
+                        DropdownSearch = http["search"].ToString();
                     }
 
                     if (http.ContainsKey("values"))
@@ -387,7 +387,7 @@ namespace DataTables
 
                         foreach (var item in http["values"] as Dictionary<string, object>)
                         {
-                            DropdownValues.Add(item.Value as string);
+                            DropdownValues.Add(item.Value.ToString());
                         }
                     }
                 }
